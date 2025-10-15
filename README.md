@@ -43,7 +43,7 @@ Sem o servidor configurado conforme o manual acima, o cliente Backrest **não te
 Certifique-se de que o servidor REST:
 
 - Está em execução e acessível pela rede;
-- Tem a porta configurada (ex.: `8081`);
+- Tem a porta configurada (ex.: `8000`);
 - Possui o repositório REST ativo e pronto para receber conexões.
 
 ---
@@ -175,9 +175,9 @@ Na interface, é possível:
 3. Informe o endereço do servidor REST configurado, por exemplo:
 
    ```
-   http://ip_do_servidor:8081
+   rest:http://ip_do_servidor:8000
    ```
-4. Digite a senha do repositório (mesma usada no servidor).
+4. Digite a senha do repositório.
 5. Clique em **Connect** para testar a conexão.
 
 💡 **Sugestão:** Use senhas distintas para cada cliente, mantendo o controle de acesso.
@@ -190,7 +190,7 @@ Para atualizar o Backrest para uma nova versão:
 
 ```
 sudo service backrest stop
-fetch https://github.com/garethgeorge/backrest/releases/download/v1.9.2/backrest_Freebsd_x86_64.tar.gz
+fetch https://github.com/garethgeorge/backrest/releases/download/<version>/backrest_Freebsd_x86_64.tar.gz
 tar -xzf backrest_Freebsd_x86_64.tar.gz
 sudo cp backrest /usr/local/bin/backrest
 sudo service backrest start
